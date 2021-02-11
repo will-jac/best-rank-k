@@ -20,5 +20,6 @@ for k in [1, 5, 10, 25, 50]:
     VtL = Vt[0:k,:]
     print(UL.shape, STL.shape, VtL.shape)
     pl.imshow(np.dot(np.dot(UL, STL), VtL))
-    pl.xlabel('k = ' + str(k))
+    pl.xlabel('k = ' + str(k) + ' total size: ' \
+        + str(UL.shape) + '+' + str(STL.shape) + '+' + str(VtL.shape))
     pl.show()
